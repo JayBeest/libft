@@ -6,7 +6,7 @@
 /*   By: jcorneli <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 23:57:10 by jcorneli      #+#    #+#                 */
-/*   Updated: 2021/01/12 17:09:31 by jcorneli      ########   odam.nl         */
+/*   Updated: 2021/02/05 13:06:38 by jcorneli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s, char const *set);
 char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
+
+char				*ft_itoba(long long num, int base, int iscap);
+void				ft_itoba_nomalloc(long long num, int base, char *rs);
+
+
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);

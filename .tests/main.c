@@ -6,7 +6,7 @@
 /*   By: jcorneli <marvin@codam.nl>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 23:06:58 by jcorneli          #+#    #+#             */
-/*   Updated: 2020/12/19 12:45:51 by jcorneli      ########   odam.nl         */
+/*   Updated: 2021/02/05 11:34:33 by jcorneli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,12 @@ int	main()
 //	ftt_substr();
 //	ftt_strjoin();
 //	ftt_strtrim();
-	ftt_split();
+//	ftt_split();
 //	ftt_itoa();
+
+//	ftt_itoba();
+	ftt_itoba_nomalloc();
+
 //	ftt_strmapi();
 //	ftt_putchar_fd();
 //	ftt_putstr_fd();

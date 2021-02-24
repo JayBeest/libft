@@ -7,7 +7,7 @@ OBJ_F = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c\
    ft_tolower.c ft_atoi.c ft_calloc.c ft_strdup.c ft_strlcat.c
 OBJ_F_PT2 = ft_substr.c ft_strjoin.c ft_strtrim.c ft_itoa.c\
  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
- ft_strmapi.c ft_split.c
+ ft_strmapi.c ft_split.c ft_itoba.c ft_itoba_nomalloc.c
 OBJ_F_BONUS = ft_lstnew.c ft_lstadd_front.c\
  ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
   ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
@@ -18,7 +18,7 @@ OBJ_F_T = main.c ftt_memset.c ftt_strnstr.c ftt_isalpha.c\
   ftt_strlcpy.c
 OBJ_F_T_PT2 = ftt_substr.c ftt_strjoin.c ftt_strtrim.c\
  ftt_itoa.c ftt_putchar_fd.c ftt_putstr_fd.c ftt_putendl_fd.c\
- ftt_putnbr_fd.c ftt_strmapi.c ftt_split.c
+ ftt_putnbr_fd.c ftt_strmapi.c ftt_split.c ftt_itoba.c ftt_itoba_nomalloc.c
 OBJ_F_BONUS_T = ftt_lstnew.c ftt_lstsize.c ftt_lstlast.c\
 ftt_lstadd_back.c ftt_lstdelone.c ftt_lstclear.c ftt_lstmap.c
 CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g
@@ -40,7 +40,7 @@ endif
 
 ifdef WITH_TEST
 O_FILES = $(OBJ_TEST)
-NAME = libft.a libft
+NAME = libft
 endif
 
 all: $(NAME)
@@ -58,7 +58,7 @@ $(NAME): $(O_FILES)
 	ar -rc $@ $^
 
 $(EX): $(NAME) $(O_FILES)
-	$(CC) $(CFLAGS) -o $@ $<
+	$(CC) $(CFLAGS) -o $@ $^
 
 %.o: %.c $(HEADER_FILES)
 	@echo Compiling $@

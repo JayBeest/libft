@@ -6,7 +6,7 @@
 /*   By: jcorneli <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 23:57:10 by jcorneli      #+#    #+#                 */
-/*   Updated: 2021/02/05 13:06:38 by jcorneli      ########   odam.nl         */
+/*   Updated: 2021/02/24 23:11:39 by jcorneli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+void				ft_strtoupper(char *str);
+void				ft_strtolower(char *str);
 
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_strdup(const char *s);

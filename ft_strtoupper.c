@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ftt_tolower.c                                      :+:    :+:            */
+/*   ft_strtoupper.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jcorneli <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/02 14:35:35 by jcorneli      #+#    #+#                 */
-/*   Updated: 2021/02/24 23:08:46 by jcorneli      ########   odam.nl         */
+/*   Created: 2021/02/24 22:59:08 by jcorneli      #+#    #+#                 */
+/*   Updated: 2021/02/24 23:03:37 by jcorneli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include <libft.h>
 
-#include <stdio.h>
-#include "libft.h"
-
-int     ftt_tolower()
+void	ft_strtoupper(char *str)
 {
-	int		i;
-
-	i = -128;
-	while (i < 128)
+	while (*str)
 	{
-		printf("tolower:    %c (%d)\n", tolower(i), i);
-		printf("ft_tolower: %c (%d)\n", ft_tolower(i), i);
-		i++;
+		*str = ft_toupper(*str);
+		str++;
 	}
-	return (1);
 }
+

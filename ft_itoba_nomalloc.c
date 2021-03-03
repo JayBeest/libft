@@ -25,7 +25,7 @@ static char	*getstr(long long num, int base, char *s)
 	if (num % base < 10)
 		*s = num % base + '0';
 	else
-		*s = 'A' + num % base - 10;
+		*s = 'a' + num % base - 10;
 	*(s + 1) = '\0';
 	return (s + 1);
 }

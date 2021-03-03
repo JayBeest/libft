@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ftt_tolower.c                                      :+:    :+:            */
+/*   ftt_strtolower.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jcorneli <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/02 14:35:35 by jcorneli      #+#    #+#                 */
-/*   Updated: 2021/02/24 23:08:46 by jcorneli      ########   odam.nl         */
+/*   Created: 2021/02/24 23:08:52 by jcorneli      #+#    #+#                 */
+/*   Updated: 2021/02/24 23:15:34 by jcorneli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include "test.h"
+#include <unistd.h>
 
-#include <stdio.h>
-#include "libft.h"
-
-int     ftt_tolower()
+int		ftt_strtolower()
 {
-	int		i;
+		char	str[] = "HELLO! TRAVELER 4675";
 
-	i = -128;
-	while (i < 128)
-	{
-		printf("tolower:    %c (%d)\n", tolower(i), i);
-		printf("ft_tolower: %c (%d)\n", ft_tolower(i), i);
-		i++;
-	}
-	return (1);
+		printf("%s\n", str);
+		ft_strtolower(str);
+		printf("%s\n", str);
+		return (1);
 }

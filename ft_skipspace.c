@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_toupper.c                                       :+:    :+:            */
+/*   ft_skipspace.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jcorneli <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/02 14:26:30 by jcorneli      #+#    #+#                 */
-/*   Updated: 2020/11/26 16:58:06 by jcorneli      ########   odam.nl         */
+/*   Created: 2021/04/25 23:13:49 by jcorneli      #+#    #+#                 */
+/*   Updated: 2021/04/25 23:13:58 by jcorneli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	islower(int c)
-{
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
-int	ft_toupper(int c)
+char *ft_skipspace(char const *str)
 {
-	if (islower(c))
-		return (c - 32);
-	return (c);
+	while (ft_isspace(*str))
+		str++;
+	return ((char *)str);
 }

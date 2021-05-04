@@ -6,7 +6,7 @@
 /*   By: jcorneli <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 11:36:37 by jcorneli      #+#    #+#                 */
-/*   Updated: 2021/02/24 23:12:15 by jcorneli      ########   odam.nl         */
+/*   Updated: 2021/05/02 17:54:29 by jcorneli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int		ftt_isprint();
 int		ftt_toupper();
 int		ftt_tolower();
 int		ftt_atoi();
+int		ftt_atof();
 
 int		ftt_substr();
 int		ftt_strjoin();

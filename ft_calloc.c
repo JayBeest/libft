@@ -6,7 +6,7 @@
 /*   By: jcorneli <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/02 20:32:16 by jcorneli      #+#    #+#                 */
-/*   Updated: 2021/04/07 00:34:45 by jcorneli      ########   odam.nl         */
+/*   Updated: 2020/11/26 16:27:47 by jcorneli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void		*retptr;
 
 	if (nmemb != 0 && ((size_t)-1 / nmemb < size))
-		return (NULL);
-	if (nmemb * size > ((size_t)-1))
 		return (NULL);
 	if (nmemb == 0 || size == 0)
 	{

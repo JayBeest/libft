@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_toupper.c                                       :+:    :+:            */
+/*   floater.h                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jcorneli <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/02 14:26:30 by jcorneli      #+#    #+#                 */
-/*   Updated: 2020/11/26 16:58:06 by jcorneli      ########   odam.nl         */
+/*   Created: 2021/05/02 15:36:55 by jcorneli      #+#    #+#                 */
+/*   Updated: 2021/05/02 15:36:57 by jcorneli      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	islower(int c)
-{
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
-}
+#ifndef FLOATER_H
+# define FLOATER_H
 
-int	ft_toupper(int c)
+typedef union 	u_double
 {
-	if (islower(c))
-		return (c - 32);
-	return (c);
-}
+	double	value;
+	struct
+	{
+		unsigned long long	mantissa : 52;
+		unsigned int 		exponent : 11;
+		unsigned int 		sign : 1;
+	};
+}				t_double;
+
+#endif

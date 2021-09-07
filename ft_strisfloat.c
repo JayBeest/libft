@@ -2,7 +2,7 @@
 
 int	ft_strisfloat(const char *str)
 {
-	int dot;
+	int	dot;
 
 	dot = 0;
 	if (*str == '-')

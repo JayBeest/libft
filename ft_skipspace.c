@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char *ft_skipspace(char const *str)
+char	*ft_skipspace(char const *str)
 {
 	while (ft_isspace(*str))
 		str++;

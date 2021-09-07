@@ -1,4 +1,4 @@
-int ft_isrg_bit(unsigned bit)
+int	ft_isrg_bit(int bit)
 {
 	return (bit < 256);
 }

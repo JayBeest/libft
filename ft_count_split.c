@@ -1,8 +1,8 @@
 #include "libft.h"
 
-int ft_count_split(char **split)
+int	ft_count_split(char **split)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (split[count])

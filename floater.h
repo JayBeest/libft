@@ -13,14 +13,14 @@
 #ifndef FLOATER_H
 # define FLOATER_H
 
-typedef union 	u_double
+typedef union u_double
 {
 	double	value;
 	struct
 	{
 		unsigned long long	mantissa : 52;
-		unsigned int 		exponent : 11;
-		unsigned int 		sign : 1;
+		unsigned int		exponent : 11;
+		unsigned int		sign : 1;
 	};
 }				t_double;
 

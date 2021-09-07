@@ -51,21 +51,20 @@ void				ft_strtolower(char *str);
 int					ft_strisfloat(const char *str);
 int					ft_strisvector(const char *str);
 
-
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_strdup(const char *s);
 
-int 				ft_isrg_bit(unsigned bit);
-int 				ft_isspace(int c);
-char 				*ft_skipspace(const char *str);
-double 				ft_atof(const char *str);
+int					ft_isrg_bit(int bit);
+int					ft_isspace(int c);
+char				*ft_skipspace(const char *str);
+double				ft_atof(const char *str);
 
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s, char const *set);
 char				**ft_split(char const *s, char c);
-int 				ft_count_split(char **split);
-void 				ft_free_split(char **split);
+int					ft_count_split(char **split);
+void				ft_free_split(char **split);
 
 char				*ft_itoa(int n);
 

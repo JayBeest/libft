@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static double get_double(const char *str, int sign)
+static double	get_double(const char *str, int sign)
 {
 	int		decimal;
 	double	result;
@@ -37,9 +37,9 @@ static double get_double(const char *str, int sign)
 	return (sign * result / decimal);
 }
 
-double ft_atof(const char *str)
+double	ft_atof(const char *str)
 {
-	int 	sign;
+	int	sign;
 
 	if (!str)
 		return (-1);

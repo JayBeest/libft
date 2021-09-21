@@ -5,7 +5,7 @@ int	ft_strisfloat(const char *str)
 	int	dot;
 
 	dot = 0;
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 		str++;
 	while (*str)
 	{

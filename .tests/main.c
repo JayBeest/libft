@@ -13,7 +13,7 @@
 #include "libft.h"
 #include "test.h"
 
-int	main()
+int	main(int argc, char **argv)
 {
 //	ftt_memcpy();
 //	ftt_strnstr();
@@ -38,7 +38,7 @@ int	main()
 
 //	ftt_itoba();
 //	ftt_itoba_nomalloc();
-	ftt_strtolower();
+//	ftt_strtolower();
 
 //	ftt_strmapi();
 //	ftt_putchar_fd();
@@ -55,5 +55,6 @@ int	main()
 //	ftt_lstiter();
 //	ftt_lstmap();
 
+	ftt_gnl(argc, argv);
 	return (1);
 }

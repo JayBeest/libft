@@ -58,4 +58,6 @@ int		ftt_lstclear();
 int		ftt_lstiter();
 int		ftt_lstmap();
 
+int 	ftt_gnl(int argc, char **argv);
+
 #endif

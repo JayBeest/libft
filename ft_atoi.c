@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 static int	isspace(int c)
 {
@@ -19,19 +18,6 @@ static int	isspace(int c)
 		|| c == '\r' || c == '\t' || c == '\v')
 		return (1);
 	return (0);
-}
-
-static long	checkflow(long long retv)
-{
-	if (retv > LLONG_MAX)
-		retv = LLONG_MAX;
-	else if (retv > LONG_MAX)
-		retv = LONG_MAX;
-	else if (retv < LLONG_MIN)
-		retv = LLONG_MIN;
-	else if (retv < LONG_MIN)
-		retv = LONG_MIN;
-	return (retv);
 }
 
 static char	*cleanstr(const char *ptr, int *multip)
@@ -48,11 +34,11 @@ static char	*cleanstr(const char *ptr, int *multip)
 	return ((char *)ptr);
 }
 
-int	ft_atoi(const char *ptr)
+long	ft_atoi(const char *ptr)
 {
-	int			multip;
-	long long	retv;
-	char		*str;
+	int		multip;
+	long	retv;
+	char	*str;
 
 	retv = 0;
 	multip = 1;
@@ -69,6 +55,5 @@ int	ft_atoi(const char *ptr)
 			retv = retv * 10 + (*str - 48);
 		str++;
 	}
-	retv = checkflow(retv);
 	return (retv * multip);
 }

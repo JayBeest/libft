@@ -71,9 +71,8 @@ SRC =	ft_atoi.c \
 
 SRC_DIR =	src
 OBJ_DIR =	$(SRC_DIR)/obj
-INCL =		-I$(SRC_DIR)/incl
+INCL =		-I.
 CFLAGS = -Wall -Wextra -Werror
-HEADER = libft.h
 CC = clang
 
 O_FILES = $(SRC:%.c=$(OBJ_DIR)/%.o)

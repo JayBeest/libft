@@ -67,23 +67,27 @@ SRC =	ft_atoi.c \
 		ft_substr.c \
 		ft_tolower.c
 
-CFLAGS = -g -Wall -Wextra -Werror
-HEADER_FILES = libft.h
+SRC_DIR =	src
+OBJ_DIR =	$(SRC_DIR)/obj
+INCL =		-I$(SRC_DIR)/incl
+CFLAGS = -Wall -Wextra -Werror
+HEADER = libft.h
 CC = clang
 
-O_FILES = $(SRC:.c=.o)
+O_FILES = $(SRC:%.c=$(OBJ_DIR)/%.o)
 
 all: $(NAME)
 
 $(NAME): $(O_FILES)
 	@$(AR) -r $@ $^
 
-%.o: %.c $(HEADER_FILES)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(@D)
 	@echo Compiling $@
-	@$(CC) -c $(CFLAGS) -o $@ $<
+	@$(CC) -c $(CFLAGS) $(INCL) -o $@ $<
 
 clean:
-	rm -f $(O_FILES)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)

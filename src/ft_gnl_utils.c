@@ -1,5 +1,19 @@
-#include <ft_gnl.h>
+#include <libft.h>
 #include <stddef.h>
+
+void	gnl_cpy(char *src, char *dest, int n)
+{
+	int	i;
+
+	if (!src || !dest || n < 1)
+		return ;
+	i = 0;
+	while (src[i] && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+}
 
 int	gnl_strlen(const char *str)
 {

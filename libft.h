@@ -6,7 +6,7 @@
 /*   By: jcorneli <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 23:57:10 by jcorneli      #+#    #+#                 */
-/*   Updated: 2021/03/31 21:52:59 by jcorneli      ########   odam.nl         */
+/*   Updated: 2021/10/18 09:31:14 by jcorneli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 # define LIBFT_H
 
 # include <stddef.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 16
+# endif
+
+typedef enum e_bool
+{
+	FALSE,
+	TRUE
+}			t_bool;
 
 typedef struct s_list
 {
@@ -87,6 +97,10 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+
 char				*ft_gnl(int fd);
+int					gnl_strlen(const char *str);
+int					find_nl_index(const char *str);
+void				gnl_cpy(char *src, char *dest, int n);
 
 #endif

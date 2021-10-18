@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include <stdlib.h>
-#include <ft_gnl.h>
-#include <ft_gnl_utils.h>
+//#include <ft_gnl.h>
+//#include <ft_gnl_utils.h>
 #include <libft.h>
 
 char	*ft_strnjoin_freeold(char *buffer, char *line, int n)
@@ -21,8 +21,8 @@ char	*ft_strnjoin_freeold(char *buffer, char *line, int n)
 		return (NULL);
 	}
 	new_line[old_line_len + n] = '\0';
-	ft_memcpy(line, new_line, old_line_len);
-	ft_memcpy(buffer, new_line + old_line_len, n);
+	gnl_cpy(line, new_line, old_line_len);
+	gnl_cpy(buffer, new_line + old_line_len, n);
 	if (line)
 	{
 		free(line);
@@ -36,7 +36,7 @@ void	shift_buffer(char *buffer, int nl_index)
 	int	shift_len;
 
 	shift_len = gnl_strlen(buffer + nl_index + 1);
-	ft_memcpy(buffer + nl_index + 1, buffer, shift_len);
+	gnl_cpy(buffer + nl_index + 1, buffer, shift_len);
 	buffer[shift_len] = '\0';
 }
 
@@ -60,7 +60,7 @@ t_bool	newline_in_buffer(char *buffer, char **line)
 	return (FALSE);
 }
 
-char	*ft_get_next_line(int fd)
+char	*ft_gnl(int fd)
 {
 	int			read_return;
 	char		*line;

@@ -1,7 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_gnl.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jcorneli <marvin@codam.nl>                 +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/24 15:02:16 by jcorneli          #+#    #+#             */
+/*   Updated: 2021/11/24 15:02:16 by jcorneli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdlib.h>
-//#include <ft_gnl.h>
-//#include <ft_gnl_utils.h>
 #include <libft.h>
 
 char	*ft_strnjoin_freeold(char *buffer, char *line, int n)

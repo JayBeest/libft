@@ -12,10 +12,10 @@
 
 #include <stdlib.h>
 
-void	ft_free_str(char *str)
+void	ft_free_str(char **str)
 {
-	if (!str)
+	if (!*str)
 		return ;
-	free(str);
-	str = NULL;
+	free(*str);
+	*str = NULL;
 }

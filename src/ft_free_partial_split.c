@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_split.c                                    :+:      :+:    :+:   */
+/*   ft_free_partial_split.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcorneli <marvin@codam.nl>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 15:01:53 by jcorneli          #+#    #+#             */
-/*   Updated: 2021/11/24 15:01:53 by jcorneli         ###   ########.fr       */
+/*   Created: 2022/03/03 21:24:22 by jcorneli          #+#    #+#             */
+/*   Updated: 2022/03/03 21:24:22 by jcorneli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	ft_free_split(char ***split)
+void	ft_free_partial_split(char ***split, int failed_i)
 {
 	int	i;
 
 	i = 0;
-	if (!*split)
-		return ;
-	while ((*split)[i])
+	while (i < failed_i)
 	{
 		free((*split)[i]);
-		(*split)[i] = NULL;
 		i++;
 	}
-	free (*split);
+	free(*split);
 	*split = NULL;
 }

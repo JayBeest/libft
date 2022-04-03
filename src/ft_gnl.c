@@ -50,7 +50,7 @@ void	shift_buffer(char *buffer, int nl_index)
 	buffer[shift_len] = '\0';
 }
 
-t_bool	newline_in_buffer(char *buffer, char **line)
+int	newline_in_buffer(char *buffer, char **line)
 {
 	int		nl_index;
 	char	*new_line;
@@ -62,12 +62,12 @@ t_bool	newline_in_buffer(char *buffer, char **line)
 		new_line = ft_strnjoin_freeold(buffer, *line, nl_index);
 		shift_buffer(buffer, nl_index);
 		*line = new_line;
-		return (TRUE);
+		return (1);
 	}
 	new_line = ft_strnjoin_freeold(buffer, *line, gnl_strlen(buffer));
 	shift_buffer(buffer, gnl_strlen(buffer));
 	*line = new_line;
-	return (FALSE);
+	return (0);
 }
 
 char	*ft_gnl(int fd)
